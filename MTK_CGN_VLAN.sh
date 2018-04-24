@@ -16,8 +16,8 @@ if [[ $1 ]] && [[ $2 ]]; then
         echo ERROR start VLAN is greater then end VLAN
     fi
 else
-    startVLAN=1
-    endVLAN=10
+    startVLAN=100
+    endVLAN=199
 fi
 linebreak=0
 VLAN=$(echo $startVLAN)
