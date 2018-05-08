@@ -28,6 +28,14 @@ Octet4=0
 interface=sfp-sfpplus2
 interface=ether4
 
+width=$(tput cols)
+echo ""
+while [ $width -gt 0 ]; do
+    echo -n '='
+     ((width--))
+done
+printf '\n\n\n\n\n'
+
 while [ $VLAN -le $endVLAN ]; do
     if [ $VLAN -le "1005" -a  $VLAN -ge "1001" ] || [ $VLAN -le "1" ] || [ $VLAN -gt "4094" ]; then
         ((VLAN++))
